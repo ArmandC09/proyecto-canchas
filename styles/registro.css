@@ -1,0 +1,20 @@
+.register-page{position:relative;min-height:100vh;background:url('../imagenes/fondo-login.png') center/cover no-repeat;padding:24px 0 40px;overflow:hidden}
+.register-page::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,28,54,.26),rgba(0,0,0,.3))}
+.register-wrap{position:relative;z-index:2;width:min(980px,calc(100% - 32px));margin:24px auto 0}
+.register-panel{background:rgba(37,58,93,.32);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(8px);padding:38px 70px 42px;text-align:center;color:#fff}
+.register-badge{width:100px;height:100px;margin:0 auto 16px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:3rem;box-shadow:0 10px 20px rgba(0,0,0,.22);position:relative}
+.register-badge.user{background:linear-gradient(to bottom,#7cd655,#49ab38)}
+.register-badge.owner{background:linear-gradient(to bottom,#5f86e2,#3d63b9)}
+.register-badge .ball{position:absolute;right:8px;bottom:6px;font-size:2.4rem}
+.register-panel h1{font-size:3rem;font-weight:900;margin-bottom:18px;text-shadow:0 3px 10px rgba(0,0,0,.25)}
+.register-divider{height:2px;background:rgba(255,255,255,.38);margin-bottom:38px}
+.reg-form{max-width:620px;margin:0 auto}
+.reg-input{position:relative;margin-bottom:16px}
+.reg-input i:first-child{position:absolute;left:18px;top:50%;transform:translateY(-50%);font-size:1.5rem;color:rgba(255,255,255,.95)}
+.reg-input input{width:100%;height:64px;border:2px solid rgba(255,255,255,.26);border-radius:10px;background:rgba(140,164,205,.16);padding:0 62px 0 60px;color:#fff;font-size:1.08rem;outline:none}
+.reg-input input::placeholder{color:rgba(255,255,255,.86)}
+.reg-input .toggle-pass{position:absolute;right:16px;top:50%;transform:translateY(-50%);background:transparent;border:none;color:#fff;font-size:1.55rem;cursor:pointer}
+.reg-submit{width:100%;height:68px;font-size:1.42rem;margin-top:10px}
+.login-note{margin-top:18px;font-size:1rem;color:#fff}
+.login-note a{font-weight:900;text-decoration:underline}
+@media (max-width:768px){.register-panel{padding:30px 22px 34px}.register-panel h1{font-size:2.2rem}.register-badge{width:84px;height:84px;font-size:2.45rem}.register-badge .ball{font-size:2rem}.reg-input input{height:58px}.reg-submit{height:60px;font-size:1.2rem}}

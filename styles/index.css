@@ -1,0 +1,16 @@
+.hero-home{position:relative;min-height:100vh;background:url('../imagenes/fondo_index.png') center/cover no-repeat;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-home::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,18,40,.25),rgba(0,0,0,.36))}
+.hero-home::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(255,255,255,.06),transparent 45%)}
+.home-content{position:relative;z-index:2;width:min(1200px,calc(100% - 32px));display:flex;flex-direction:column;align-items:center;padding:40px 0;color:#fff;text-align:center}
+.home-title h1{font-size:clamp(2.8rem,6vw,5rem);font-weight:900;line-height:1.05;text-shadow:0 4px 12px rgba(0,0,0,.38)}
+.home-title .green{color:#79d220;font-style:italic}
+.home-title p{font-size:clamp(1rem,2vw,1.7rem);font-weight:800;margin-top:18px;padding-top:12px;border-top:2px solid rgba(255,255,255,.38);display:inline-block}
+.home-actions{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;margin:34px 0 74px}
+.home-actions .btn{padding:18px 34px;font-size:1.6rem;min-width:290px}
+.steps-wrap{width:100%;max-width:1120px;background:rgba(255,255,255,.9);border-radius:22px;padding:34px 22px 26px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;box-shadow:0 18px 40px rgba(0,0,0,.24)}
+.step{text-align:center;position:relative;padding:0 14px}
+.step:not(:last-child)::after{content:"";position:absolute;top:24%;right:-12px;width:1px;height:94px;background:rgba(0,0,0,.15)}
+.step-icon{width:96px;height:96px;border-radius:50%;margin:-82px auto 16px;background:radial-gradient(circle at 30% 30%,#57ef2f,#0d9a17 65%,#05670f);display:flex;align-items:center;justify-content:center;font-size:3rem;color:#fff;border:3px solid rgba(255,255,255,.72);box-shadow:0 8px 18px rgba(0,0,0,.26)}
+.step h3{font-size:2rem;color:#1b4852;margin-bottom:8px}
+.step p{font-size:1.15rem;color:#355960;font-weight:700}
+@media (max-width:900px){.steps-wrap{grid-template-columns:1fr;gap:36px;padding-top:24px}.step:not(:last-child)::after{display:none}.step-icon{margin-top:0}.home-actions .btn{min-width:unset;width:100%;max-width:360px;font-size:1.3rem}}

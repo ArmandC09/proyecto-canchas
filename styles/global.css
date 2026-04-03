@@ -1,0 +1,60 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --green:#0d7c46;
+  --green-dark:#085c34;
+  --blue:#244b90;
+  --orange:#ef7a00;
+  --orange-dark:#c86400;
+  --red:#d74b42;
+  --text:#24344b;
+  --muted:#66748d;
+  --line:#d8dde6;
+  --bg:#eef1f5;
+  --white:#fff;
+  --shadow:0 10px 30px rgba(0,0,0,.12);
+  --radius:16px;
+}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1220px,calc(100% - 32px));margin:0 auto}
+.page-pad{padding:34px 0 48px}
+.glass-top-nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding-top:24px;position:relative;z-index:2}
+.glass-top-nav a{padding:13px 26px;border:1px solid rgba(255,255,255,.25);background:rgba(24,45,88,.42);color:#fff;font-weight:700;border-radius:10px;backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.glass-top-nav a.active,.glass-top-nav a:hover{background:rgba(19,39,77,.78)}
+.hero-banner{position:relative;min-height:320px;background:center/cover no-repeat;display:flex;align-items:center;justify-content:center;padding:28px 0 34px;overflow:hidden}
+.hero-banner::before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,27,50,.3),rgba(0,0,0,.32))}
+.hero-banner .hero-inner{position:relative;z-index:2;width:min(1220px,calc(100% - 32px));text-align:center;color:#fff}
+.hero-banner h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;text-shadow:0 4px 12px rgba(0,0,0,.28)}
+.hero-banner p{margin-top:16px;font-size:1.1rem;font-weight:600;text-shadow:0 2px 8px rgba(0,0,0,.25)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:none;border-radius:10px;padding:14px 24px;font-size:1rem;font-weight:800;cursor:pointer;transition:.2s ease;box-shadow:0 8px 18px rgba(0,0,0,.14)}
+.btn:hover{transform:translateY(-2px)}
+.btn-green{background:linear-gradient(to bottom,#139458,var(--green));color:#fff}
+.btn-green:hover{background:linear-gradient(to bottom,#12854f,var(--green-dark))}
+.btn-blue{background:linear-gradient(to bottom,#3868be,var(--blue));color:#fff}
+.btn-orange{background:linear-gradient(to bottom,#ff911d,var(--orange));color:#fff}
+.btn-red{background:linear-gradient(to bottom,#ef6a61,var(--red));color:#fff}
+.btn-light{background:#fff;color:var(--text);border:1px solid var(--line)}
+.section-card{background:rgba(255,255,255,.92);border:1px solid #dde3eb;border-radius:18px;box-shadow:var(--shadow)}
+.section-title{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+.section-title h2{font-size:2rem;font-weight:800;color:#223654;white-space:nowrap}
+.section-title span{height:2px;background:var(--line);width:100%}
+.form-control,.form-select,.form-textarea{width:100%;border:1px solid #d4dae4;border-radius:10px;background:#fff;padding:14px 16px;font-size:1rem;color:var(--text);outline:none}
+.form-textarea{min-height:130px;resize:vertical}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font-size:.95rem;font-weight:800}
+.badge.green{background:#dff3e7;color:#0a6b3c}
+.badge.orange{background:#feeedc;color:#cb6e00}
+.badge.red{background:#fde3e1;color:#b83f37}
+.badge.blue{background:#dfe8fb;color:#274d95}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{padding:12px 18px;border:1px solid var(--line);background:#fff;border-radius:10px;font-weight:800;color:#384b67}
+.tab.active{background:#2f6954;color:#fff;border-color:#2f6954}
+.empty-state {grid-column: 1 / -1;background: #ffffff;border: 2px dashed #cfd6e2;border-radius: 16px;padding: 55px 30px;text-align: center;box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);}
+.empty-icon {font-size: 3.8rem;margin-bottom: 14px;}
+.empty-state h3 {font-size: 1.8rem;color: #344764;margin-bottom: 10px;}
+.empty-state p {font-size: 1.05rem;color: #66748d;max-width: 650px;margin: 0 auto;line-height: 1.6;}
+.footer-note{text-align:center;color:#6a7991;margin-top:20px}
+@media (max-width:1000px){.grid-2,.grid-3{grid-template-columns:1fr}}
+@media (max-width:700px){.container{width:min(100% - 24px,1220px)}.section-title{flex-direction:column;align-items:flex-start;gap:10px}.section-title h2{white-space:normal;font-size:1.8rem}}

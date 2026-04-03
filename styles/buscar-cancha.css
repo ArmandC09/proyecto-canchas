@@ -1,0 +1,19 @@
+.search-hero{background-image:url('../imagenes/buscar-cancha.png')}
+.search-box{background:rgba(255,255,255,.96);padding:18px;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.18);display:grid;grid-template-columns:1fr 1fr 1fr 220px;gap:14px;align-items:center;margin-top:26px}
+.search-box select,.search-box input{height:54px;border:1px solid #d6d9df;border-radius:8px;padding:0 16px;font-size:1rem;color:#49586e;background:#fff;outline:none}
+.cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.court-card{background:#fff;border:1px solid #dde3eb;border-radius:14px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.court-card img{height:190px;width:100%;object-fit:cover}
+.court-card .body{padding:14px 14px 18px}
+.court-card h3{font-size:1.1rem;margin-bottom:12px;color:#2b3d5a}
+.court-card p{color:#66748d;line-height:1.5;margin-bottom:6px}
+.court-card .price{font-size:1rem;color:#263853;font-weight:700;margin:12px 0 16px}
+.lower-promos{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:28px}
+.promo-box{border-radius:14px;padding:28px 26px;display:flex;gap:18px;align-items:flex-start}
+.promo-box.green{background:#e8f4e8}.promo-box.orange{background:#f8ebdd}
+.promo-icon{font-size:3rem;line-height:1}
+.promo-box h3{font-size:2rem;color:#32445f;margin-bottom:8px}
+.promo-box p{font-size:1.1rem;color:#3f4f66;line-height:1.5;margin-bottom:18px}
+.promo-box .btn{min-width:190px}
+@media (max-width:1100px){.cards-grid{grid-template-columns:repeat(2,1fr)}.search-box{grid-template-columns:1fr 1fr}}
+@media (max-width:700px){.cards-grid,.lower-promos,.search-box{grid-template-columns:1fr}.promo-box{flex-direction:column}.promo-box h3{font-size:1.6rem}.promo-box .btn{width:100%}}
