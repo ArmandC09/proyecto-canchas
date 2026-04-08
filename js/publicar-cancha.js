@@ -24,7 +24,5 @@
       reader.readAsDataURL(file);
     });
 
-    // Reset input para poder volver a seleccionar
-    input.value = '';
   });
 })();
