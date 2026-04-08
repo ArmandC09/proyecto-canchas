@@ -1,0 +1,14 @@
+Options -Indexes
+DirectoryIndex frontend/index.php index.php
+
+# Proteger directorios sensibles
+<FilesMatch "\.(sql|txt|md|git)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Redirigir raíz a frontend
+    RewriteRule ^$ frontend/index.php [L,R=302]
+</IfModule>

@@ -1,0 +1,34 @@
+/* mis-canchas.css */
+.courts-list{display:flex;flex-direction:column;gap:14px}
+.court-row{
+  display:grid;grid-template-columns:200px 1fr 240px;
+  gap:16px;align-items:start;
+  background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);
+  padding:16px;box-shadow:var(--shadow-sm);transition:box-shadow .15s;
+}
+.court-row:hover{box-shadow:var(--shadow)}
+.court-media .main{height:122px;width:100%;object-fit:cover;border-radius:var(--radius-sm)}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:6px}
+.thumbs img{height:46px;width:100%;object-fit:cover;border-radius:6px}
+.court-data h3{font-family:var(--font);font-size:1.05rem;font-weight:800;margin-bottom:6px}
+.court-data p{color:var(--muted);line-height:1.5;font-size:.88rem;margin-bottom:8px}
+.sports-line{font-size:.88rem;font-weight:700;color:var(--text-2)}
+.price-line{font-size:.92rem;font-weight:700;color:var(--green);margin-top:10px}
+.court-side{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.side-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.count-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#0f2238;color:#fff;border-radius:var(--radius-sm);
+  padding:10px 14px;font-family:var(--font);font-weight:800;font-size:.88rem;
+  transition:background .15s;
+}
+.count-badge:hover{background:#1a3a5c}
+.count-badge span{
+  display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center;
+  background:var(--red);border-radius:6px;font-size:.82rem;
+}
+
+@media(max-width:900px){
+  .court-row{grid-template-columns:1fr}
+  .court-side{align-items:flex-start;flex-direction:row;flex-wrap:wrap;align-items:center}
+}

@@ -1,0 +1,22 @@
+/* inicio-usuario.css */
+.user-hero{background-image:url('../imagenes/buscar-cancha.png');min-height:200px}
+
+/* Próximos partidos */
+.proximas-list{display:flex;flex-direction:column;gap:10px}
+.proxima-card{
+  background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);
+  padding:16px 20px;display:flex;align-items:center;gap:14px;
+  box-shadow:var(--shadow-sm);
+}
+.proxima-deporte{font-size:2rem;flex-shrink:0}
+.proxima-info{flex:1;display:flex;flex-direction:column;gap:3px}
+.proxima-info strong{font-family:var(--font);font-weight:800;font-size:.98rem}
+.proxima-info span{font-size:.85rem;color:var(--muted)}
+
+@media(max-width:900px){
+  .quick-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .quick-grid{grid-template-columns:1fr}
+  .proxima-card{flex-wrap:wrap}
+}

@@ -1,0 +1,130 @@
+/* detalle-cancha.css */
+.detail-page{min-height:100vh;background:var(--bg);padding:28px 0 56px}
+.detail-wrap{width:min(1240px,calc(100% - 32px));margin:0 auto}
+
+/* Estado vacío en detalle */
+.detail-empty{
+  text-align:center;padding:80px 24px;
+  background:#fff;border-radius:var(--radius-lg);border:1.5px solid var(--line);
+  box-shadow:var(--shadow-sm);margin-top:20px;
+}
+.detail-empty .empty-icon{font-size:4rem;margin-bottom:16px;opacity:.5}
+.detail-empty h2{font-family:var(--font);font-size:1.8rem;font-weight:900;color:var(--text);margin-bottom:10px}
+.detail-empty p{color:var(--muted);margin-bottom:24px;font-size:1rem}
+
+/* Breadcrumb */
+.breadcrumbs{
+  display:flex;gap:10px;align-items:center;
+  padding:14px 0 20px;font-size:.9rem;flex-wrap:wrap;
+}
+.breadcrumbs a{
+  color:var(--green);font-weight:700;
+  padding:6px 14px;background:var(--green-bg);border-radius:var(--radius-sm);
+  transition:.15s ease;
+}
+.breadcrumbs a:hover{background:#d1fae5}
+.breadcrumbs span{color:var(--text-2);font-weight:600}
+
+/* Layout */
+.detail-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;align-items:start}
+.detail-left{display:flex;flex-direction:column;gap:16px}
+
+/* Galería */
+.gallery-card{padding:0;overflow:hidden;border-radius:var(--radius-lg)}
+.gallery-main{
+  height:400px;object-fit:cover;width:100%;
+  transition:opacity .2s ease;
+}
+.gallery-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:8px}
+.gallery-thumbs img{
+  height:110px;width:100%;object-fit:cover;border-radius:10px;
+  cursor:pointer;opacity:.75;transition:opacity .15s,transform .15s;border:2px solid transparent;
+}
+.gallery-thumbs img.active,.gallery-thumbs img:hover{opacity:1;border-color:var(--green)}
+.gallery-placeholder{
+  height:400px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:var(--muted);gap:12px;background:#f8fafc;
+}
+.gallery-placeholder span{font-size:3rem;opacity:.4}
+
+/* Schedule */
+.schedule-card{padding:22px}
+.schedule-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.schedule-card h3{font-family:var(--font);font-size:1.25rem;font-weight:800}
+.schedule-date-pick{width:auto;flex:0 0 auto;min-width:160px}
+
+.slots{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.slot{
+  display:flex;align-items:center;justify-content:space-between;
+  background:#f8fafc;padding:12px 14px;border-radius:10px;
+  border:1.5px solid var(--line);
+}
+.slot-time{font-family:var(--font);font-weight:700;font-size:.95rem}
+.slot-free .slot-status{
+  background:#dcfce7;color:#15803d;
+  padding:4px 10px;border-radius:999px;font-size:.8rem;font-weight:700;font-family:var(--font);
+}
+.slot-busy{opacity:.65}
+.slot-busy .slot-status{
+  background:#fee2e2;color:#b91c1c;
+  padding:4px 10px;border-radius:999px;font-size:.8rem;font-weight:700;font-family:var(--font);
+}
+.slots-empty{
+  text-align:center;padding:32px 16px;color:var(--muted);
+  border:2px dashed #cbd5e1;border-radius:var(--radius);
+}
+.slots-empty span{font-size:2.4rem;display:block;margin-bottom:10px;opacity:.5}
+.slots-empty p{font-size:.9rem}
+
+/* Reserve card */
+.reserve-card{padding:26px}
+.reserve-card h2{font-family:var(--font);font-size:1.7rem;font-weight:900;margin-bottom:10px}
+.court-meta{margin-bottom:10px}
+.court-location{font-size:.9rem;color:var(--muted);font-weight:600}
+.rating{
+  display:flex;align-items:center;gap:8px;margin-bottom:14px;
+  font-size:.92rem;color:var(--text-2);font-weight:600;
+}
+.stars{color:#f59e0b;font-size:1.1rem}
+.reserve-price{
+  font-size:1rem;color:var(--text-2);margin-bottom:20px;
+  padding:14px 16px;background:var(--green-bg);border-radius:var(--radius-sm);
+}
+.reserve-price strong{font-family:var(--font);font-size:1.5rem;color:var(--green);font-weight:900}
+
+.reserve-form{display:flex;flex-direction:column;gap:14px}
+.reserve-field{display:flex;flex-direction:column;gap:5px}
+.check-row{
+  display:flex;align-items:center;gap:10px;
+  font-size:.9rem;font-weight:700;color:var(--text-2);cursor:pointer;
+}
+.check-row input{width:18px;height:18px;accent-color:var(--green)}
+
+/* Login prompt en reserve */
+.reserve-login-prompt{
+  text-align:center;padding:20px 0 4px;
+}
+.reserve-login-prompt p{color:var(--text-2);margin-bottom:16px;font-size:.95rem}
+.register-prompt-link{
+  display:block;margin-top:14px;color:var(--green);font-weight:700;font-size:.9rem;text-align:center;
+}
+.register-prompt-link:hover{text-decoration:underline}
+
+@media(max-width:1000px){
+  .detail-grid{grid-template-columns:1fr}
+  .gallery-main{height:300px}
+}
+@media(max-width:600px){
+  .slots{grid-template-columns:1fr}
+  .gallery-thumbs img{height:80px}
+  .reserve-card h2{font-size:1.4rem}
+  .schedule-head{flex-direction:column;align-items:flex-start}
+  .schedule-date-pick{width:100%}
+}
+
+
+.detail-empty{
+  background:linear-gradient(180deg,#ffffff,#f8fafc);
+  max-width:860px;margin:26px auto 0;
+}
+.detail-empty .empty-icon{opacity:.8}
