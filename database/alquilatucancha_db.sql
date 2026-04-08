@@ -121,16 +121,4 @@ CREATE TABLE IF NOT EXISTS reservas (
     FOREIGN KEY (cancha_id)  REFERENCES canchas(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- =========================
--- PAGOS
--- =========================
-CREATE TABLE IF NOT EXISTS pagos (
-  id          INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  reserva_id  INT UNSIGNED NOT NULL,
-  monto       DECIMAL(10,2) NOT NULL,
-  metodo_pago VARCHAR(50),                 -- yape, plin, tarjeta, efectivo, etc.
-  estado      ENUM('pendiente','pagado','rechazado') DEFAULT 'pendiente',
-  fecha_pago  TIMESTAMP    NULL,
-  CONSTRAINT fk_pago_reserva
-    FOREIGN KEY (reserva_id) REFERENCES reservas(id) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
